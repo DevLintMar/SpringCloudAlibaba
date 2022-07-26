@@ -1,0 +1,10 @@
+server:
+  port: 8300
+spring:
+  application:
+    name: borrowservice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud
+    username: root
+    password: 123456

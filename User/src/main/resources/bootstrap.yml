@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: userservice
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: localhost:8848

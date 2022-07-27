@@ -1,0 +1,166 @@
+2022-07-27 12:25:47,048 INFO [dump-task] add task. groupKey=bookservice-01+DEFAULT_GROUP, taskKey=bookservice-01+DEFAULT_GROUP++false+null
+
+2022-07-27 12:26:01,586 INFO [dump-task] add task. groupKey=bookservice-02+DEFAULT_GROUP, taskKey=bookservice-02+DEFAULT_GROUP++false+null
+
+2022-07-27 12:26:13,277 INFO [dump-task] add task. groupKey=bookservice-03+DEFAULT_GROUP, taskKey=bookservice-03+DEFAULT_GROUP++false+null
+
+2022-07-27 12:26:27,979 INFO [dump-task] add task. groupKey=borrowservice-01+DEFAULT_GROUP, taskKey=borrowservice-01+DEFAULT_GROUP++false+null
+
+2022-07-27 12:26:40,119 INFO [dump-task] add task. groupKey=borrowservice-02+DEFAULT_GROUP, taskKey=borrowservice-02+DEFAULT_GROUP++false+null
+
+2022-07-27 12:26:56,330 INFO [dump-task] add task. groupKey=userservice-01+DEFAULT_GROUP, taskKey=userservice-01+DEFAULT_GROUP++false+null
+
+2022-07-27 12:27:05,509 INFO [dump-task] add task. groupKey=userservice-02+DEFAULT_GROUP, taskKey=userservice-02+DEFAULT_GROUP++false+null
+
+2022-07-27 12:27:36,365 INFO [dump-task] add task. groupKey=gateway-main+DEFAULT_GROUP, taskKey=gateway-main+DEFAULT_GROUP++false+null
+
+2022-07-27 12:27:52,219 INFO [dump-task] add task. groupKey=gateway-main+DEFAULT_GROUP, taskKey=gateway-main+DEFAULT_GROUP++false+null
+
+2022-07-27 12:57:32,362 INFO [dump-task] add task. groupKey=bookservice-dev+DEFAULT_GROUP, taskKey=bookservice-dev+DEFAULT_GROUP++false+null
+
+2022-07-27 13:04:34,934 INFO [dump-task] add task. groupKey=bookservice-01.yml+DEFAULT_GROUP, taskKey=bookservice-01.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:04:59,709 INFO [dump-task] add task. groupKey=bookservice-02.yml+DEFAULT_GROUP, taskKey=bookservice-02.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:05:11,335 INFO [dump-task] add task. groupKey=bookservice-03.yml+DEFAULT_GROUP, taskKey=bookservice-03.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:05:29,767 INFO [dump-task] add task. groupKey=bookservice-01+DEFAULT_GROUP, taskKey=bookservice-01+DEFAULT_GROUP++false+null
+
+2022-07-27 13:05:33,816 INFO [dump-task] add task. groupKey=bookservice-02+DEFAULT_GROUP, taskKey=bookservice-02+DEFAULT_GROUP++false+null
+
+2022-07-27 13:05:36,729 INFO [dump-task] add task. groupKey=bookservice-03+DEFAULT_GROUP, taskKey=bookservice-03+DEFAULT_GROUP++false+null
+
+2022-07-27 13:06:09,257 INFO [dump-task] add task. groupKey=borrowservice-01.yml+DEFAULT_GROUP, taskKey=borrowservice-01.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:06:28,593 INFO [dump-task] add task. groupKey=borrowservice-02.yml+DEFAULT_GROUP, taskKey=borrowservice-02.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:07:05,275 INFO [dump-task] add task. groupKey=userservice-02.yml+DEFAULT_GROUP, taskKey=userservice-02.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:07:20,655 INFO [dump-task] add task. groupKey=borrowservice-01+DEFAULT_GROUP, taskKey=borrowservice-01+DEFAULT_GROUP++false+null
+
+2022-07-27 13:07:23,974 INFO [dump-task] add task. groupKey=bookservice-dev+DEFAULT_GROUP, taskKey=bookservice-dev+DEFAULT_GROUP++false+null
+
+2022-07-27 13:07:27,063 INFO [dump-task] add task. groupKey=borrowservice-02+DEFAULT_GROUP, taskKey=borrowservice-02+DEFAULT_GROUP++false+null
+
+2022-07-27 13:07:29,918 INFO [dump-task] add task. groupKey=userservice-01+DEFAULT_GROUP, taskKey=userservice-01+DEFAULT_GROUP++false+null
+
+2022-07-27 13:08:04,714 INFO [dump-task] add task. groupKey=userservice-01.yml+DEFAULT_GROUP, taskKey=userservice-01.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:08:11,774 INFO [dump-task] add task. groupKey=userservice-02+DEFAULT_GROUP, taskKey=userservice-02+DEFAULT_GROUP++false+null
+
+2022-07-27 13:08:32,984 INFO [dump-task] add task. groupKey=gateway-main.yml+DEFAULT_GROUP, taskKey=gateway-main.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 13:08:41,109 INFO [dump-task] add task. groupKey=gateway-main+DEFAULT_GROUP, taskKey=gateway-main+DEFAULT_GROUP++false+null
+
+2022-07-27 13:37:53,132 INFO [dump-all-ok] bookservice-01.yml+DEFAULT_GROUP, 1658898274926, length=447, md5=dfdcb3b477c60225916a6141f41f3a32
+
+2022-07-27 13:37:53,133 INFO [dump-all-ok] bookservice-02.yml+DEFAULT_GROUP, 1658898299701, length=449, md5=37300de0d3e7aa61e35de114f91c4b4b
+
+2022-07-27 13:37:53,133 INFO [dump-all-ok] bookservice-03.yml+DEFAULT_GROUP, 1658898311328, length=444, md5=cebd85bc6db7a625ae2cdc2c3d76e98a
+
+2022-07-27 13:37:53,134 INFO [dump-all-ok] borrowservice-01.yml+DEFAULT_GROUP, 1658898369249, length=486, md5=c6853f215064a6431829d7810021b4dd
+
+2022-07-27 13:37:53,134 INFO [dump-all-ok] borrowservice-02.yml+DEFAULT_GROUP, 1658898388586, length=483, md5=556fee6a82a81c28e88fd1b6be456853
+
+2022-07-27 13:37:53,135 INFO [dump-all-ok] userservice-02.yml+DEFAULT_GROUP, 1658898425267, length=444, md5=67b6d5498588b9a4622896cfe941ede0
+
+2022-07-27 13:37:53,135 INFO [dump-all-ok] userservice-01.yml+DEFAULT_GROUP, 1658898484704, length=447, md5=57ab394f6983666febaaa2fd87f66730
+
+2022-07-27 13:37:53,135 INFO [dump-all-ok] gateway-main.yml+DEFAULT_GROUP, 1658898512977, length=792, md5=de76dbfe7d7dcfc6693aa21781a06b06
+
+2022-07-27 13:38:56,350 INFO [dump-all-ok] bookservice-01.yml+DEFAULT_GROUP, 1658898274926, length=447, md5=dfdcb3b477c60225916a6141f41f3a32
+
+2022-07-27 13:38:56,350 INFO [dump-all-ok] bookservice-02.yml+DEFAULT_GROUP, 1658898299701, length=449, md5=37300de0d3e7aa61e35de114f91c4b4b
+
+2022-07-27 13:38:56,351 INFO [dump-all-ok] bookservice-03.yml+DEFAULT_GROUP, 1658898311328, length=444, md5=cebd85bc6db7a625ae2cdc2c3d76e98a
+
+2022-07-27 13:38:56,351 INFO [dump-all-ok] borrowservice-01.yml+DEFAULT_GROUP, 1658898369249, length=486, md5=c6853f215064a6431829d7810021b4dd
+
+2022-07-27 13:38:56,351 INFO [dump-all-ok] borrowservice-02.yml+DEFAULT_GROUP, 1658898388586, length=483, md5=556fee6a82a81c28e88fd1b6be456853
+
+2022-07-27 13:38:56,352 INFO [dump-all-ok] userservice-02.yml+DEFAULT_GROUP, 1658898425267, length=444, md5=67b6d5498588b9a4622896cfe941ede0
+
+2022-07-27 13:38:56,352 INFO [dump-all-ok] userservice-01.yml+DEFAULT_GROUP, 1658898484704, length=447, md5=57ab394f6983666febaaa2fd87f66730
+
+2022-07-27 13:38:56,353 INFO [dump-all-ok] gateway-main.yml+DEFAULT_GROUP, 1658898512977, length=792, md5=de76dbfe7d7dcfc6693aa21781a06b06
+
+2022-07-27 15:04:33,725 INFO [dump-all-ok] bookservice-01.yml+DEFAULT_GROUP, 1658898274926, length=447, md5=dfdcb3b477c60225916a6141f41f3a32
+
+2022-07-27 15:04:33,726 INFO [dump-all-ok] bookservice-02.yml+DEFAULT_GROUP, 1658898299701, length=449, md5=37300de0d3e7aa61e35de114f91c4b4b
+
+2022-07-27 15:04:33,726 INFO [dump-all-ok] bookservice-03.yml+DEFAULT_GROUP, 1658898311328, length=444, md5=cebd85bc6db7a625ae2cdc2c3d76e98a
+
+2022-07-27 15:04:33,727 INFO [dump-all-ok] borrowservice-01.yml+DEFAULT_GROUP, 1658898369249, length=486, md5=c6853f215064a6431829d7810021b4dd
+
+2022-07-27 15:04:33,728 INFO [dump-all-ok] borrowservice-02.yml+DEFAULT_GROUP, 1658898388586, length=483, md5=556fee6a82a81c28e88fd1b6be456853
+
+2022-07-27 15:04:33,728 INFO [dump-all-ok] userservice-02.yml+DEFAULT_GROUP, 1658898425267, length=444, md5=67b6d5498588b9a4622896cfe941ede0
+
+2022-07-27 15:04:33,729 INFO [dump-all-ok] userservice-01.yml+DEFAULT_GROUP, 1658898484704, length=447, md5=57ab394f6983666febaaa2fd87f66730
+
+2022-07-27 15:04:33,729 INFO [dump-all-ok] gateway-main.yml+DEFAULT_GROUP, 1658898512977, length=792, md5=de76dbfe7d7dcfc6693aa21781a06b06
+
+2022-07-27 15:38:50,597 INFO [dump-all-ok] bookservice-01.yml+DEFAULT_GROUP, 1658898274926, length=447, md5=dfdcb3b477c60225916a6141f41f3a32
+
+2022-07-27 15:38:50,598 INFO [dump-all-ok] bookservice-02.yml+DEFAULT_GROUP, 1658898299701, length=449, md5=37300de0d3e7aa61e35de114f91c4b4b
+
+2022-07-27 15:38:50,598 INFO [dump-all-ok] bookservice-03.yml+DEFAULT_GROUP, 1658898311328, length=444, md5=cebd85bc6db7a625ae2cdc2c3d76e98a
+
+2022-07-27 15:38:50,599 INFO [dump-all-ok] borrowservice-01.yml+DEFAULT_GROUP, 1658898369249, length=486, md5=c6853f215064a6431829d7810021b4dd
+
+2022-07-27 15:38:50,599 INFO [dump-all-ok] borrowservice-02.yml+DEFAULT_GROUP, 1658898388586, length=483, md5=556fee6a82a81c28e88fd1b6be456853
+
+2022-07-27 15:38:50,600 INFO [dump-all-ok] userservice-02.yml+DEFAULT_GROUP, 1658898425267, length=444, md5=67b6d5498588b9a4622896cfe941ede0
+
+2022-07-27 15:38:50,601 INFO [dump-all-ok] userservice-01.yml+DEFAULT_GROUP, 1658898484704, length=447, md5=57ab394f6983666febaaa2fd87f66730
+
+2022-07-27 15:38:50,601 INFO [dump-all-ok] gateway-main.yml+DEFAULT_GROUP, 1658898512977, length=792, md5=de76dbfe7d7dcfc6693aa21781a06b06
+
+2022-07-27 15:45:36,287 INFO [dump-all-ok] bookservice-01.yml+DEFAULT_GROUP, 1658898274926, length=447, md5=dfdcb3b477c60225916a6141f41f3a32
+
+2022-07-27 15:45:36,288 INFO [dump-all-ok] bookservice-02.yml+DEFAULT_GROUP, 1658898299701, length=449, md5=37300de0d3e7aa61e35de114f91c4b4b
+
+2022-07-27 15:45:36,288 INFO [dump-all-ok] bookservice-03.yml+DEFAULT_GROUP, 1658898311328, length=444, md5=cebd85bc6db7a625ae2cdc2c3d76e98a
+
+2022-07-27 15:45:36,289 INFO [dump-all-ok] borrowservice-01.yml+DEFAULT_GROUP, 1658898369249, length=486, md5=c6853f215064a6431829d7810021b4dd
+
+2022-07-27 15:45:36,289 INFO [dump-all-ok] borrowservice-02.yml+DEFAULT_GROUP, 1658898388586, length=483, md5=556fee6a82a81c28e88fd1b6be456853
+
+2022-07-27 15:45:36,290 INFO [dump-all-ok] userservice-02.yml+DEFAULT_GROUP, 1658898425267, length=444, md5=67b6d5498588b9a4622896cfe941ede0
+
+2022-07-27 15:45:36,290 INFO [dump-all-ok] userservice-01.yml+DEFAULT_GROUP, 1658898484704, length=447, md5=57ab394f6983666febaaa2fd87f66730
+
+2022-07-27 15:45:36,291 INFO [dump-all-ok] gateway-main.yml+DEFAULT_GROUP, 1658898512977, length=792, md5=de76dbfe7d7dcfc6693aa21781a06b06
+
+2022-07-27 15:46:39,601 INFO [dump-task] add task. groupKey=gateway-main.yml+DEFAULT_GROUP, taskKey=gateway-main.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 16:25:18,133 INFO [dump-all-ok] bookservice-01.yml+DEFAULT_GROUP, 1658898274926, length=447, md5=dfdcb3b477c60225916a6141f41f3a32
+
+2022-07-27 16:25:18,134 INFO [dump-all-ok] bookservice-02.yml+DEFAULT_GROUP, 1658898299701, length=449, md5=37300de0d3e7aa61e35de114f91c4b4b
+
+2022-07-27 16:25:18,134 INFO [dump-all-ok] bookservice-03.yml+DEFAULT_GROUP, 1658898311328, length=444, md5=cebd85bc6db7a625ae2cdc2c3d76e98a
+
+2022-07-27 16:25:18,134 INFO [dump-all-ok] borrowservice-01.yml+DEFAULT_GROUP, 1658898369249, length=486, md5=c6853f215064a6431829d7810021b4dd
+
+2022-07-27 16:25:18,135 INFO [dump-all-ok] borrowservice-02.yml+DEFAULT_GROUP, 1658898388586, length=483, md5=556fee6a82a81c28e88fd1b6be456853
+
+2022-07-27 16:25:18,135 INFO [dump-all-ok] userservice-02.yml+DEFAULT_GROUP, 1658898425267, length=444, md5=67b6d5498588b9a4622896cfe941ede0
+
+2022-07-27 16:25:18,136 INFO [dump-all-ok] userservice-01.yml+DEFAULT_GROUP, 1658898484704, length=447, md5=57ab394f6983666febaaa2fd87f66730
+
+2022-07-27 16:25:18,136 INFO [dump-all-ok] gateway-main.yml+DEFAULT_GROUP, 1658907999384, length=761, md5=838acd45cd5cf096c034eb2d7e5f3af7
+
+2022-07-27 16:25:32,617 INFO [dump-task] add task. groupKey=bookservice-01.yml+DEFAULT_GROUP, taskKey=bookservice-01.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 16:25:42,722 INFO [dump-task] add task. groupKey=bookservice-02.yml+DEFAULT_GROUP, taskKey=bookservice-02.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 16:25:50,791 INFO [dump-task] add task. groupKey=bookservice-03.yml+DEFAULT_GROUP, taskKey=bookservice-03.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 16:25:58,361 INFO [dump-task] add task. groupKey=borrowservice-01.yml+DEFAULT_GROUP, taskKey=borrowservice-01.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 16:26:08,228 INFO [dump-task] add task. groupKey=borrowservice-02.yml+DEFAULT_GROUP, taskKey=borrowservice-02.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 16:26:16,112 INFO [dump-task] add task. groupKey=userservice-02.yml+DEFAULT_GROUP, taskKey=userservice-02.yml+DEFAULT_GROUP++false+null
+
+2022-07-27 16:26:23,436 INFO [dump-task] add task. groupKey=userservice-01.yml+DEFAULT_GROUP, taskKey=userservice-01.yml+DEFAULT_GROUP++false+null
+

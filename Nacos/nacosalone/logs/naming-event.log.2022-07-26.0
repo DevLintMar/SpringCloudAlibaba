@@ -1,0 +1,48 @@
+2022-07-26 21:45:46,610 INFO DEFAULT_GROUP@@bookservice {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.31:8200:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2022-07-26 21:45:46,620 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bookservice, ips: 192.168.1.31:8200_true,
+
+2022-07-26 21:45:50,719 INFO DEFAULT_GROUP@@borrowservice {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.31:8300:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2022-07-26 21:45:50,719 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@borrowservice, ips: 192.168.1.31:8300_true,
+
+2022-07-26 21:45:54,024 INFO DEFAULT_GROUP@@userservice {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.31:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2022-07-26 21:45:54,024 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@userservice, ips: 192.168.1.31:8100_true,
+
+2022-07-26 21:46:19,030 INFO {POS} {IP-DISABLED} valid: 192.168.1.31:8100@DEFAULT@DEFAULT_GROUP@@userservice, region: unknown, msg: client timeout after 15000, last beat: 1658843159029
+
+2022-07-26 21:46:29,173 INFO DEFAULT_GROUP@@userservice {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.31:8100:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2022-07-26 21:46:29,174 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@userservice, ips: 
+
+2022-07-26 21:48:55,046 INFO DEFAULT_GROUP@@userservice {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.1.31:8100:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2022-07-26 21:48:55,046 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@userservice, ips: 192.168.1.31:8100_true,
+
+2022-07-26 21:48:59,181 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bookservice, ips: 192.168.1.31:8200_true,
+
+2022-07-26 21:49:00,729 INFO {POS} {IP-DISABLED} valid: 192.168.1.31:8300@DEFAULT@DEFAULT_GROUP@@borrowservice, region: unknown, msg: client timeout after 15000, last beat: 1658843320976
+
+2022-07-26 21:49:04,926 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@borrowservice, ips: 192.168.1.31:8300_false,
+
+2022-07-26 21:49:06,894 INFO service: DEFAULT_GROUP@@borrowservice {POS} {IP-ENABLED} valid: 192.168.1.31:8300@DEFAULT, region: unknown, msg: client beat ok
+
+2022-07-26 21:49:20,049 INFO {POS} {IP-DISABLED} valid: 192.168.1.31:8100@DEFAULT@DEFAULT_GROUP@@userservice, region: unknown, msg: client timeout after 3000, last beat: 1658843356235
+
+2022-07-26 21:49:20,054 INFO DEFAULT_GROUP@@userservice {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.31:8100:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2022-07-26 21:49:20,054 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@userservice, ips: 
+
+2022-07-26 21:50:35,737 INFO {POS} {IP-DISABLED} valid: 192.168.1.31:8300@DEFAULT@DEFAULT_GROUP@@borrowservice, region: unknown, msg: client timeout after 3000, last beat: 1658843429423
+
+2022-07-26 21:50:35,742 INFO DEFAULT_GROUP@@borrowservice {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.31:8300:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2022-07-26 21:50:35,742 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@borrowservice, ips: 
+
+2022-07-26 21:50:36,249 INFO {POS} {IP-DISABLED} valid: 192.168.1.31:8200@DEFAULT@DEFAULT_GROUP@@bookservice, region: unknown, msg: client timeout after 3000, last beat: 1658843429717
+
+2022-07-26 21:50:36,254 INFO DEFAULT_GROUP@@bookservice {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.1.31:8200:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2022-07-26 21:50:36,254 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@bookservice, ips: 
+

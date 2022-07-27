@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: borrowservice
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud
+    username: root
+    password: 123456
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        heart-beat-interval: 1000
+        heart-beat-timeout: 3000
+        ephemeral: false
+    loadbalancer:
+      nacos:
+        enabled: true
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:8888
+      web-context-unify: false
+      block-page: /blocked
+feign:
+  sentinel:
+    enabled: true

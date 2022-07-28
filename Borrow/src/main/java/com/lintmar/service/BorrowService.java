@@ -8,4 +8,8 @@ import com.lintmar.bean.UserBorrowDetail;
  **/
 public interface BorrowService {
     UserBorrowDetail getUserBorrowDetailByUid(Integer uid);
+
+    boolean borrow(Integer uid, Integer bid);
+
+    boolean doReturn(Integer uid, Integer bid);
 }

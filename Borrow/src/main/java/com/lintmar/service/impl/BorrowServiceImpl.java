@@ -11,6 +11,7 @@ import com.lintmar.entity.Borrow;
 import com.lintmar.entity.User;
 import com.lintmar.repository.BorrowRepository;
 import com.lintmar.service.BorrowService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -69,5 +70,30 @@ public class BorrowServiceImpl implements BorrowService {
         detail.setUser(user);
         detail.setBookList(Collections.emptyList());
         return detail;
+    }
+
+    @Override
+    @GlobalTransactional
+    public boolean borrow(Integer uid, Integer bid) {
+        if (userClient.bookCount(uid) == 0) throw new RuntimeException("用户借阅量不足");
+        if (bookClient.count(bid) == 0) throw new RuntimeException("图书数量不足");
+        if (borrowRepository.findBorrowByUidAndBid(uid, bid) != null) throw new RuntimeException("用户已经借阅该图书");
+        if (!userClient.borrow(uid)) throw new RuntimeException("用户借阅时出现错误");
+        if (!bookClient.borrow(bid)) throw new RuntimeException("借阅图书时出现错误");
+        Borrow borrow = new Borrow();
+        borrow.setUid(uid);
+        borrow.setBid(bid);
+        if (borrowRepository.save(borrow).getMid() == null) throw new RuntimeException("录入借阅信息时出现错误");
+        return true;
+    }
+
+    @Override
+    @GlobalTransactional
+    public boolean doReturn(Integer uid, Integer bid) {
+        if (borrowRepository.findBorrowByUidAndBid(uid, bid) == null) throw new RuntimeException("用户未借阅该图书");
+        if (!userClient.doReturn(uid)) throw new RuntimeException("用户还书时出现错误");
+        if (!bookClient.doReturn(bid)) throw new RuntimeException("归还图书时出现错误");
+        if (borrowRepository.deleteBorrowByUidAndBid(uid, bid) == 0) throw new RuntimeException("录入归还信息时出现错误");
+        return true;
     }
 }

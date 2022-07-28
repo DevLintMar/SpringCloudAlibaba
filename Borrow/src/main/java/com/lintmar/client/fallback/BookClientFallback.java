@@ -18,4 +18,19 @@ public class BookClientFallback implements BookClient {
         book.setDesc("请联系管理员");
         return book;
     }
+
+    @Override
+    public Integer count(Integer bid) {
+        return -1;
+    }
+
+    @Override
+    public boolean borrow(Integer bid) {
+        return false;
+    }
+
+    @Override
+    public boolean doReturn(Integer bid) {
+        return false;
+    }
 }

@@ -19,4 +19,19 @@ public class UserClientFallback implements UserClient {
         user.setSex("未知");
         return user;
     }
+
+    @Override
+    public Integer bookCount(Integer uid) {
+        return -1;
+    }
+
+    @Override
+    public boolean borrow(Integer uid) {
+        return false;
+    }
+
+    @Override
+    public boolean doReturn(Integer uid) {
+        return false;
+    }
 }

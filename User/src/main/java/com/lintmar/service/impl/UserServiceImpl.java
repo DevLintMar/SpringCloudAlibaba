@@ -19,4 +19,14 @@ public class UserServiceImpl implements UserService {
     public User findUserByUid(Integer uid) {
         return userRepository.findUserByUid(uid);
     }
+
+    @Override
+    public Integer getBookCountByUid(Integer uid) {
+        return userRepository.findUserByUid(uid).getBookCount();
+    }
+
+    @Override
+    public boolean updateBookCountByUid(Integer uid, Integer bookCount) {
+        return userRepository.updateBookCountByUid(uid, bookCount) == 1;
+    }
 }

@@ -17,3 +17,16 @@ spring:
       eager: true
       transport:
         dashboard: localhost:8888
+seata:
+  registry:
+    type: nacos
+    nacos:
+      namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
+      username: nacos
+      password: nacos
+  config:
+    type: nacos
+    nacos:
+      namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
+      username: nacos
+      password: nacos

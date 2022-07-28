@@ -27,4 +27,19 @@ public class BookController {
         log.info("BookService[{}]被调用", environment);
         return bookService.findBookByBid(bid);
     }
+
+    @RequestMapping("/book/count/{bid}")
+    public Integer count(@PathVariable("bid") Integer bid) {
+        return bookService.getCountByBid(bid);
+    }
+
+    @RequestMapping("/book/borrow/{bid}")
+    public boolean borrow(@PathVariable("bid") Integer bid) {
+        return bookService.updateCountByBid(bid, bookService.getCountByBid(bid) - 1);
+    }
+
+    @RequestMapping("/book/return/{bid}")
+    public boolean doReturn(@PathVariable("bid") Integer bid) {
+        return bookService.updateCountByBid(bid, bookService.getCountByBid(bid) + 1);
+    }
 }

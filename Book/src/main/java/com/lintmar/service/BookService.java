@@ -8,4 +8,8 @@ import com.lintmar.entity.Book;
  **/
 public interface BookService {
     Book findBookByBid(Integer bid);
+
+    Integer getCountByBid(Integer bid);
+
+    boolean updateCountByBid(Integer bid, Integer count);
 }

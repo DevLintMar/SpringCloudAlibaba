@@ -27,4 +27,19 @@ public class UserController {
         log.info("UserService[{}]被调用", environment);
         return userService.findUserByUid(uid);
     }
+
+    @RequestMapping("/user/bookCount/{uid}")
+    public Integer bookCount(@PathVariable("uid") Integer uid) {
+        return userService.getBookCountByUid(uid);
+    }
+
+    @RequestMapping("/user/borrow/{uid}")
+    public boolean borrow(@PathVariable("uid") Integer uid) {
+        return userService.updateBookCountByUid(uid, userService.getBookCountByUid(uid) - 1);
+    }
+
+    @RequestMapping("/user/return/{uid}")
+    public boolean doReturn(@PathVariable("uid") Integer uid) {
+        return userService.updateBookCountByUid(uid, userService.getBookCountByUid(uid) + 1);
+    }
 }

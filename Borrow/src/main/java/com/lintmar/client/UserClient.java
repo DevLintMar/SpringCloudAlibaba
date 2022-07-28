@@ -14,4 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface UserClient {
     @RequestMapping("/user/{uid}")
     User findUserByUid(@PathVariable("uid") Integer uid);
+
+    @RequestMapping("/user/bookCount/{uid}")
+    Integer bookCount(@PathVariable("uid") Integer uid);
+
+    @RequestMapping("/user/borrow/{uid}")
+    boolean borrow(@PathVariable("uid") Integer uid);
+
+    @RequestMapping("/user/return/{uid}")
+    boolean doReturn(@PathVariable("uid") Integer uid);
 }

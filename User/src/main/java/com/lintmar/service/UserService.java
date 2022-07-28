@@ -8,4 +8,8 @@ import com.lintmar.entity.User;
  **/
 public interface UserService {
     User findUserByUid(Integer uid);
+
+    Integer getBookCountByUid(Integer uid);
+
+    boolean updateBookCountByUid(Integer uid, Integer bookCount);
 }

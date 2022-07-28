@@ -19,4 +19,14 @@ public class BookServiceImpl implements BookService {
     public Book findBookByBid(Integer bid) {
         return bookRepository.findBookByBid(bid);
     }
+
+    @Override
+    public Integer getCountByBid(Integer bid) {
+        return bookRepository.findBookByBid(bid).getCount();
+    }
+
+    @Override
+    public boolean updateCountByBid(Integer bid, Integer count) {
+        return bookRepository.updateCountByBid(bid, count) == 1;
+    }
 }

@@ -22,4 +22,7 @@ public class Book {
 
     @Column(name = "desc")
     private String desc;
+
+    @Column(name = "count")
+    private Integer count;
 }

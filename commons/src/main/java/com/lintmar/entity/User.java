@@ -25,4 +25,7 @@ public class User {
 
     @Column(name = "sex")
     private String sex;
+
+    @Column(name = "book_count")
+    private Integer bookCount;
 }

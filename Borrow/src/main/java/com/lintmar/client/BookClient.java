@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author LintMar
  * @date 2022/7/27
  **/
-@FeignClient(value = "bookservice", fallback = BookClientFallback.class)
+@FeignClient(value = "bookservice", contextId = "bookClient", fallback = BookClientFallback.class)
 public interface BookClient {
     @RequestMapping("/book/{bid}")
     Book findBookByBid(@PathVariable("bid") Integer bid);

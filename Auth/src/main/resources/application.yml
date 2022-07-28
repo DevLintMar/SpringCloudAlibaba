@@ -1,0 +1,16 @@
+server:
+  port: 8666
+  servlet:
+    context-path: /auth
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        heart-beat-interval: 1000
+        heart-beat-timeout: 3000
+        ephemeral: false
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:8888

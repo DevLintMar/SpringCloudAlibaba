@@ -3,7 +3,7 @@ spring:
     name: borrowservice
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springcloud
+    url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=UTC
     username: root
     password: 123456
   cloud:
@@ -30,6 +30,9 @@ spring:
 feign:
   sentinel:
     enabled: true
+  oauth2:
+    enabled: true
+    load-balanced: true
 seata:
   registry:
     type: nacos
@@ -43,3 +46,10 @@ seata:
       namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
       username: nacos
       password: nacos
+security:
+  oauth2:
+    client:
+      client-id: web
+      client-secret: 123456
+    resource:
+      token-info-uri: http://localhost:8666/auth/oauth/check_token

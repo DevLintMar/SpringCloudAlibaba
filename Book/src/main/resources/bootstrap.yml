@@ -5,7 +5,7 @@ spring:
     allow-bean-definition-overriding: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springcloud
+    url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=UTC
     username: root
     password: 123456
   cloud:

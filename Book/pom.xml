@@ -48,9 +48,5 @@
             <groupId>com.lintmar</groupId>
             <artifactId>commons</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.lintmar</groupId>
-            <artifactId>seatafix</artifactId>
-        </dependency>
     </dependencies>
 </project>

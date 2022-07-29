@@ -38,7 +38,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .secret(encoder.encode("123456"))
                 .autoApprove(true)
                 .scopes("book", "user", "borrow")
-                .redirectUris("http://localhost:8200/login")
+                .redirectUris("http://localhost")
                 .authorizedGrantTypes("client_credentials", "password", "implicit", "authorization_code", "refresh_token");
     }
 

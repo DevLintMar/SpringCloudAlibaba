@@ -1,10 +1,43 @@
 spring:
   application:
     name: borrowservice
-  # profiles:
-    # active: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud
+    username: root
+    password: 123456
   cloud:
     nacos:
+      discovery:
+        server-addr: localhost:8848
+        heart-beat-interval: 1000
+        heart-beat-timeout: 3000
+        ephemeral: false
       config:
         file-extension: yml
         server-addr: localhost:8848
+    loadbalancer:
+      nacos:
+        enabled: true
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:8888
+      web-context-unify: false
+      block-page: /blocked
+feign:
+  sentinel:
+    enabled: true
+seata:
+  registry:
+    type: nacos
+    nacos:
+      namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
+      username: nacos
+      password: nacos
+  config:
+    type: nacos
+    nacos:
+      namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
+      username: nacos
+      password: nacos

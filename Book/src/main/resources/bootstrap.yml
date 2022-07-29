@@ -1,8 +1,44 @@
 spring:
   application:
     name: bookservice
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud
+    username: root
+    password: 123456
   cloud:
     nacos:
+      discovery:
+        server-addr: localhost:8848
+        heart-beat-interval: 1000
+        heart-beat-timeout: 3000
+        ephemeral: false
       config:
         file-extension: yml
         server-addr: localhost:8848
+    sentinel:
+      eager: true
+      transport:
+        dashboard: localhost:8888
+seata:
+  registry:
+    type: nacos
+    nacos:
+      namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
+      username: nacos
+      password: nacos
+  config:
+    type: nacos
+    nacos:
+      namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
+      username: nacos
+      password: nacos
+security:
+  oauth2:
+    client:
+      client-id: web
+      client-secret: 123456
+    resource:
+      token-info-uri: http://localhost:8800/auth/oauth/check_token

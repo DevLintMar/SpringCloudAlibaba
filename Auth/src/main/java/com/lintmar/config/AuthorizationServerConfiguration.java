@@ -17,7 +17,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
  **/
 @Configuration
 @EnableAuthorizationServer
-public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
+public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
     @Autowired
     AuthenticationManager manager;
 
@@ -39,7 +39,7 @@ public class OAuth2Configuration extends AuthorizationServerConfigurerAdapter {
                 .autoApprove(true)
                 .scopes("book", "user", "borrow")
                 .redirectUris("http://localhost:8200/login")
-                .authorizedGrantTypes("authorization_code", "refresh_token");
+                .authorizedGrantTypes("client_credentials", "password", "implicit", "authorization_code", "refresh_token");
     }
 
     @Override

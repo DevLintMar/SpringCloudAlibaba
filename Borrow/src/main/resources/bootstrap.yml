@@ -21,6 +21,8 @@ spring:
         enabled: true
     sentinel:
       eager: true
+      filter:
+        enabled: false
       transport:
         dashboard: localhost:8888
       web-context-unify: false

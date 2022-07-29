@@ -18,6 +18,8 @@ spring:
         server-addr: localhost:8848
     sentinel:
       eager: true
+      filter:
+        enabled: false
       transport:
         dashboard: localhost:8888
 seata:

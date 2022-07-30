@@ -42,3 +42,5 @@ security:
       client-secret: 123456
     resource:
       token-info-uri: http://localhost:8800/auth/oauth/check_token
+      jwt:
+        key-value: 123456

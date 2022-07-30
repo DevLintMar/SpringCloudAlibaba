@@ -1,8 +1,6 @@
 spring:
   application:
     name: bookservice
-  main:
-    allow-bean-definition-overriding: true
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=UTC
@@ -44,3 +42,5 @@ security:
       client-secret: 123456
     resource:
       token-info-uri: http://localhost:8800/auth/oauth/check_token
+      jwt:
+        key-value: 123456

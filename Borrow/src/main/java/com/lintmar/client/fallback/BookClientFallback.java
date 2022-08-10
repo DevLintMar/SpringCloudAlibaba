@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class BookClientFallback implements BookClient {
     @Override
-    public Book findBookByBid(Integer bid) {
+    public Book detail(Integer bid) {
         Book book = new Book();
         book.setBid(bid);
         book.setTitle("服务器异常!");

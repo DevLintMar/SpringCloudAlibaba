@@ -12,8 +12,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  **/
 @EnableFeignClients
 @EnableResourceServer
-@EnableAutoDataSourceProxy
 @SpringBootApplication
+@EnableAutoDataSourceProxy
 public class BorrowApplication {
     public static void main(String[] args) {
         SpringApplication.run(BorrowApplication.class, args);

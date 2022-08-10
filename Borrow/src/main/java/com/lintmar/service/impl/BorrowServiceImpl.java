@@ -39,8 +39,8 @@ public class BorrowServiceImpl implements BorrowService {
     @SentinelResource(value = "getBorrow", blockHandler = "blocked", fallback = "fallback")
     public UserBorrowDetail getUserBorrowDetailByUid(Integer uid) {
         List<Borrow> borrowList = borrowRepository.findBorrowByUid(uid);
-        User user = userClient.findUserByUid(uid);
-        List<Book> bookList = borrowList.stream().map((borrow) -> bookClient.findBookByBid(borrow.getBid()))
+        User user = userClient.detail(uid);
+        List<Book> bookList = borrowList.stream().map((borrow) -> bookClient.detail(borrow.getBid()))
                 .collect(Collectors.toList());
         UserBorrowDetail detail = new UserBorrowDetail();
         detail.setUser(user);

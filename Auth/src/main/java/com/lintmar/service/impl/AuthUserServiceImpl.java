@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * @author LintMar
@@ -26,7 +25,6 @@ public class AuthUserServiceImpl implements AuthUserService {
 
     @Autowired
     private BCryptPasswordEncoder encoder;
-
 
     @Override
     public AuthUser save(String username, String password) {
@@ -68,7 +66,7 @@ public class AuthUserServiceImpl implements AuthUserService {
             List<String> roles = roleList.stream().map(AuthRole::getRole).toList();
             List<AuthPermission> permissionList = new ArrayList<>();
             roleList.forEach(role -> permissionList.addAll(role.getPermissions()));
-            Stream<String> permissions = permissionList.stream().map(AuthPermission::getPermission);
+            List<String> permissions = permissionList.stream().map(AuthPermission::getPermission).toList();
             jsonObject.put("uid", user.getUid());
             jsonObject.put("username", user.getUsername());
             jsonObject.put("password", user.getPassword());

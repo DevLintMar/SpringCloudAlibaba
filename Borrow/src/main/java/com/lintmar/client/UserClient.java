@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @FeignClient(value = "userservice", contextId = "userClient", fallback = UserClientFallback.class)
 public interface UserClient {
-    @RequestMapping("/user/{uid}")
-    User findUserByUid(@PathVariable("uid") Integer uid);
+    @RequestMapping("/detail/{uid}")
+    User detail(@PathVariable("uid") Integer uid);
 
-    @RequestMapping("/user/bookCount/{uid}")
+    @RequestMapping("/bookCount/{uid}")
     Integer bookCount(@PathVariable("uid") Integer uid);
 
-    @RequestMapping("/user/borrow/{uid}")
+    @RequestMapping("/borrow/{uid}")
     boolean borrow(@PathVariable("uid") Integer uid);
 
-    @RequestMapping("/user/return/{uid}")
+    @RequestMapping("/return/{uid}")
     boolean doReturn(@PathVariable("uid") Integer uid);
 }

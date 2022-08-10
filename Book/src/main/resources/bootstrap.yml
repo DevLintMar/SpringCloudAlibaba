@@ -22,6 +22,11 @@ spring:
         enabled: false
       transport:
         dashboard: localhost:8888
+  rabbitmq:
+    addresses: 192.168.154.130
+    username: rabbit
+    password: rabbit
+    virtual-host: /bus
 seata:
   registry:
     type: nacos
@@ -35,12 +40,8 @@ seata:
       namespace: 77046564-a13c-42c2-a297-e371a0b0bb56
       username: nacos
       password: nacos
-security:
-  oauth2:
-    client:
-      client-id: web
-      client-secret: 123456
-    resource:
-      token-info-uri: http://localhost:8800/auth/oauth/check_token
-      jwt:
-        key-value: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

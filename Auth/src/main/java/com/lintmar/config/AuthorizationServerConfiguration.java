@@ -16,7 +16,6 @@ import org.springframework.security.oauth2.provider.code.AuthorizationCodeServic
 import org.springframework.security.oauth2.provider.token.AuthorizationServerTokenServices;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
 /**
  * @author LintMar
@@ -25,9 +24,6 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
-    @Autowired
-    private JwtAccessTokenConverter tokenConverter;
-
     @Autowired
     private TokenStore tokenStore;
 
@@ -45,10 +41,9 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.passwordEncoder(encoder)
-                .allowFormAuthenticationForClients()
-                .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("permitAll()");
+        security.tokenKeyAccess("permitAll()")
+                .checkTokenAccess("permitAll()")
+                .allowFormAuthenticationForClients();
     }
 
     @Override
@@ -58,8 +53,8 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
                 .secret(encoder.encode("123456"))
                 .autoApprove(true)
                 .scopes("book", "user", "borrow")
-                .redirectUris("http://localhost")
-                .authorizedGrantTypes("authorization_code", "refresh_token");
+                .redirectUris("https://www.baidu.com")
+                .authorizedGrantTypes("client_credentials", "authorization_code", "refresh_token");
     }
 
     @Override
@@ -76,7 +71,6 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
         defaultTokenServices.setClientDetailsService(clientDetailsService);
         defaultTokenServices.setSupportRefreshToken(true);
         defaultTokenServices.setTokenStore(tokenStore);
-        defaultTokenServices.setTokenEnhancer(tokenConverter);
         defaultTokenServices.setAccessTokenValiditySeconds(3600);
         defaultTokenServices.setRefreshTokenValiditySeconds(3600 * 24 * 7);
         return defaultTokenServices;

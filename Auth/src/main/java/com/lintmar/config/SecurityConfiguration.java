@@ -26,18 +26,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         auth.userDetailsService(userDetailsService).passwordEncoder(encoder);
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/user/save").hasAnyAuthority("user.save", "user.all", "server.admin")
-                .antMatchers("/user/delete").hasAnyAuthority("user.delete", "user.all",
-                        "server.admin")
-                .antMatchers("/user/find").hasAnyAuthority("user.find", "user.all", "server.admin")
-                .anyRequest().authenticated()
+        http.csrf().disable()
+                .authorizeRequests()
+                .anyRequest().permitAll()
                 .and()
                 .formLogin()
                 .permitAll()

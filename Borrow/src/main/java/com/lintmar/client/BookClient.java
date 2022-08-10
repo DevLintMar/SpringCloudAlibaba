@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @FeignClient(value = "bookservice", contextId = "bookClient", fallback = BookClientFallback.class)
 public interface BookClient {
-    @RequestMapping("/book/{bid}")
-    Book findBookByBid(@PathVariable("bid") Integer bid);
+    @RequestMapping("/detail/{bid}")
+    Book detail(@PathVariable("bid") Integer bid);
 
-    @RequestMapping("/book/count/{bid}")
+    @RequestMapping("/count/{bid}")
     Integer count(@PathVariable("bid") Integer bid);
 
-    @RequestMapping("/book/borrow/{bid}")
+    @RequestMapping("/borrow/{bid}")
     boolean borrow(@PathVariable("bid") Integer bid);
 
-    @RequestMapping("/book/return/{bid}")
+    @RequestMapping("/return/{bid}")
     boolean doReturn(@PathVariable("bid") Integer bid);
 }

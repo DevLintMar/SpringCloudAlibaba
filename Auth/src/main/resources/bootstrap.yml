@@ -1,5 +1,4 @@
 server:
-  port: 8666
   servlet:
     context-path: /auth
 spring:
@@ -26,3 +25,18 @@ spring:
         enabled: false
       transport:
         dashboard: localhost:8888
+  # redis:
+  #   sentinel:
+  #     master: redisen
+  #     nodes:
+  #       - 127.0.0.1:26379
+  #       - 127.0.0.1:26380
+  #       - 127.0.0.1:26381
+  #   cluster:
+  #     nodes:
+  #       - 127.0.0.1:6001
+  #       - 127.0.0.1:6002
+  #       - 127.0.0.1:6003
+  #       - 127.0.0.1:7002
+  #       - 127.0.0.1:7003
+  #       - 127.0.0.1:7004

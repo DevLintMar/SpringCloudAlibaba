@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserClientFallback implements UserClient {
     @Override
-    public User findUserByUid(Integer uid) {
+    public User detail(Integer uid) {
         User user = new User();
         user.setUid(uid);
         user.setName("服务器异常!");

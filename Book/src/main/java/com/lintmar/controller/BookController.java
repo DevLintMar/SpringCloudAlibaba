@@ -22,23 +22,23 @@ public class BookController {
     @Value("${spring.profiles.active}")
     private String environment;
 
-    @RequestMapping("/book/{bid}")
+    @RequestMapping("/detail/{bid}")
     public Book find(@PathVariable("bid") Integer bid) {
         log.info("BookService[{}]被调用", environment);
         return bookService.findBookByBid(bid);
     }
 
-    @RequestMapping("/book/count/{bid}")
+    @RequestMapping("/count/{bid}")
     public Integer count(@PathVariable("bid") Integer bid) {
         return bookService.getCountByBid(bid);
     }
 
-    @RequestMapping("/book/borrow/{bid}")
+    @RequestMapping("/borrow/{bid}")
     public boolean borrow(@PathVariable("bid") Integer bid) {
         return bookService.updateCountByBid(bid, bookService.getCountByBid(bid) - 1);
     }
 
-    @RequestMapping("/book/return/{bid}")
+    @RequestMapping("/return/{bid}")
     public boolean doReturn(@PathVariable("bid") Integer bid) {
         return bookService.updateCountByBid(bid, bookService.getCountByBid(bid) + 1);
     }

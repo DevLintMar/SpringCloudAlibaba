@@ -1,0 +1,69 @@
+server:
+  port: 8400
+spring:
+  application:
+    name: shardingservice
+  shardingsphere:
+    datasource:
+      names: db0,db1
+      db0:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/sharding?serverTimezone=UTC
+        username: root
+        password: 123456
+      db1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        jdbc-url: jdbc:mysql://192.168.154.130:3306/sharding?serverTimezone=UTC
+        username: admin
+        password: 123456
+    rules:
+      sharding:
+        tables:
+          sharding_book:
+            actual-data-nodes: db$->{0..1}.sharding_book_$->{0..2}
+            database-strategy:
+              standard:
+                sharding-column: sid
+                sharding-algorithm-name: alg2
+            table-strategy:
+              standard:
+                sharding-column: sid
+                sharding-algorithm-name: alg3
+            key-generate-strategy:
+              column: sid
+              key-generator-name: snow
+        sharding-algorithms:
+          alg2:
+            type: MOD
+            props:
+              sharding-count: 2
+          alg3:
+            type: MOD
+            props:
+              sharding-count: 3
+        key-generators:
+          snow:
+            type: SNOWFLAKE
+            props:
+              worker-id: 0
+      # readwrite-splitting:
+      #   data-sources:
+      #     db0:
+      #       type: Static
+      #       props:
+      #         write-data-source-name: db0
+      #         read-data-source-names: ds0,ds1
+      #         load-balancer-name: load
+      #     db1:
+      #       type: Static
+      #       props:
+      #         write-data-source-name: db1
+      #         read-data-source-names: ds2,ds3
+      #         load-balancer-name: load
+      #   load-balancers:
+      #     load:
+      #       type: ROUND_ROBIN
+    props:
+      sql-show: true

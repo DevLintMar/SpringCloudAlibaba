@@ -22,23 +22,23 @@ public class UserController {
     @Value("${spring.profiles.active}")
     private String environment;
 
-    @RequestMapping("/user/{uid}")
+    @RequestMapping("/detail/{uid}")
     public User find(@PathVariable("uid") Integer uid) {
         log.info("UserService[{}]被调用", environment);
         return userService.findUserByUid(uid);
     }
 
-    @RequestMapping("/user/bookCount/{uid}")
+    @RequestMapping("/bookCount/{uid}")
     public Integer bookCount(@PathVariable("uid") Integer uid) {
         return userService.getBookCountByUid(uid);
     }
 
-    @RequestMapping("/user/borrow/{uid}")
+    @RequestMapping("/borrow/{uid}")
     public boolean borrow(@PathVariable("uid") Integer uid) {
         return userService.updateBookCountByUid(uid, userService.getBookCountByUid(uid) - 1);
     }
 
-    @RequestMapping("/user/return/{uid}")
+    @RequestMapping("/return/{uid}")
     public boolean doReturn(@PathVariable("uid") Integer uid) {
         return userService.updateBookCountByUid(uid, userService.getBookCountByUid(uid) + 1);
     }

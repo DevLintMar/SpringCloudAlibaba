@@ -1,3 +1,6 @@
+server:
+  servlet:
+    context-path: /borrow
 spring:
   application:
     name: borrowservice
@@ -27,6 +30,21 @@ spring:
         dashboard: localhost:8888
       web-context-unify: false
       block-page: /blocked
+    stream:
+      binders:
+        local-server:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 192.168.154.130
+                port: 5672
+                username: rabbit
+                password: rabbit
+                virtual-host: /stream
+      bindings:
+        stream-out-0:
+          destination: stream.exchange
 feign:
   sentinel:
     enabled: true
@@ -53,5 +71,3 @@ security:
       client-secret: 123456
     resource:
       token-info-uri: http://localhost:8666/auth/oauth/check_token
-      jwt:
-        key-value: 123456

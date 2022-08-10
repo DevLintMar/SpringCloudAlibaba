@@ -7,9 +7,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 /**
  * @author LintMar
@@ -22,16 +25,19 @@ public class BorrowController {
     @Autowired
     private BorrowService borrowService;
 
+    @Autowired
+    StreamBridge bridge;
+
     @Value("${spring.profiles.active}")
     private String environment;
 
-    @RequestMapping("/borrow/{uid}")
+    @RequestMapping("/detail/{uid}")
     public UserBorrowDetail borrow(@PathVariable("uid") Integer uid) {
         log.info("BorrowService[{}]被调用", environment);
         return borrowService.getUserBorrowDetailByUid(uid);
     }
 
-    @RequestMapping("/borrow/take/{uid}/{bid}")
+    @RequestMapping("/borrow/{uid}/{bid}")
     public JSONObject take(@PathVariable("uid") Integer uid, @PathVariable("bid") Integer bid) {
         JSONObject jsonObject = new JSONObject();
         try {
@@ -46,7 +52,7 @@ public class BorrowController {
         return jsonObject;
     }
 
-    @RequestMapping("/borrow/return/{uid}/{bid}")
+    @RequestMapping("/return/{uid}/{bid}")
     public JSONObject doReturn(@PathVariable("uid") Integer uid, @PathVariable("bid") Integer bid) {
         JSONObject jsonObject = new JSONObject();
         try {
@@ -59,5 +65,11 @@ public class BorrowController {
         }
         jsonObject.put("code", "200");
         return jsonObject;
+    }
+
+    @RequestMapping("/publish/{message}")
+    public String publish(@PathVariable("message") String message) {
+        bridge.send("stream-out-0", message);
+        return "成功发送信息: " + message + " " + new Date();
     }
 }
